@@ -1951,7 +1951,7 @@
           <span class="header-stat"><i>✦</i><span><b>100 PRODUCTOS</b><small>Catálogo completo</small></span></span>
           <span class="header-stat"><i>⚡</i><span><b>ATENCIÓN DIRECTA</b><small>Te ayudamos a elegir</small></span></span>
         </div>
-        <a class="header-whatsapp" href="https://wa.me/525574913481" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">◉</a>
+        <a class="header-whatsapp" href="https://wa.me/525549949268" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">◉</a>
       </div>
 
       <div class="nav-links" id="navLinks">
@@ -2211,8 +2211,10 @@
               <div>
                 <span>●</span>
                 <small>
-                  <b>Teléfono / WhatsApp</b><br>
-                  5574913481
+                  <b>Teléfonos</b><br>
+                  <a href="tel:+525549949268">+52 55 4994 9268</a><br>
+                  <a href="tel:+525574913481">+52 55 7491 3481</a><br>
+                  <a href="tel:+525523383876">+52 55 2338 3876</a>
                 </small>
               </div>
 
@@ -2220,7 +2222,7 @@
                 <span>●</span>
                 <small>
                   <b>Ubicación</b><br>
-                  Tultepec, Estado de México, Mercado de San Pablito, Local 42
+                  Tu ciudad, México
                 </small>
               </div>
 
@@ -2870,6 +2872,25 @@
       "volcan de diamantina.jpeg": 1.27
     };
 
+    const piecesByProductId = {
+      1: 12, 2: 12, 3: 12, 4: 14, 5: 12, 6: 6, 7: 8, 8: 1, 9: 1, 10: 10, 
+      11: 12, 12: 25, 13: 12, 14: 1, 15: 1, 16: 1, 17: 16, 18: 6, 19: 100, 20: 10, 
+      21: 100, 22: 100, 23: 10, 24: 1000, 25: 12, 26: 10, 27: 10, 28: 6, 29: 12, 30: 10, 
+      31: 10, 32: 20, 33: 10, 34: 10, 35: 5, 36: 10, 37: 4, 38: 6, 39: 5, 40: 10, 
+      41: 20, 42: 20, 43: 72, 44: 10, 45: 10, 46: 10, 47: 10, 48: 100, 49: 144, 50: 6, 
+      51: 1000, 52: 1000, 53: 1, 54: 10, 55: 50, 56: 10, 57: 12, 58: 10, 59: 12, 60: 12, 
+      61: 10, 62: 10, 63: 24, 64: 24, 65: 12, 66: 10, 67: 5, 68: 1, 69: 20, 70: 10, 
+      71: 72, 72: 12, 73: 10, 74: 12, 75: 10, 76: 10, 77: 25, 78: 144, 79: 100, 80: 50, 
+      81: 25, 82: 100, 83: 100, 84: 1, 85: 1, 86: 9, 87: 10, 88: 12, 89: 5, 90: 1, 
+      91: 12, 92: 20, 93: 20, 94: 10, 95: 10, 96: 12, 97: 50, 98: 25, 99: 4, 100: 5, 
+      101: 10, 102: 6, 103: 6, 104: 12, 105: 20, 106: 10, 107: 10, 108: 10, 109: 5, 110: 5, 
+      111: 5, 112: 50, 113: 250, 114: 8, 115: 4, 116: 16, 117: 6, 118: 10, 119: 25, 120: 10, 
+      121: 12, 122: 100, 123: 40, 124: 1, 125: 1, 126: 30, 127: 1, 128: 72, 129: 72, 130: 10, 
+      131: 144, 132: 48, 133: 10, 134: 48, 135: 16, 136: 10, 137: 12, 138: 1, 139: 25, 140: 5, 
+      141: 10, 142: 10, 143: 100, 144: 1, 145: 25, 146: 10, 147: 4, 148: 10, 149: 10, 150: 6, 
+      151: 8, 152: 6, 153: 10, 154: 10, 155: 10, 156: 144, 157: 144, 158: 100, 159: 16, 160: 50
+    };
+
     catalogImages.forEach(([name, file], index) => {
       if (!products[index]) {
         const categoryKeys = Object.keys(categories);
@@ -2890,7 +2911,8 @@
       Object.assign(products[index], {
         name,
         image: file,
-        photoZoom: photoZooms[file] || 1
+        photoZoom: photoZooms[file] || 1,
+        pieces: piecesByProductId[products[index].id] ?? products[index].pieces
       });
     });
 
@@ -3371,7 +3393,7 @@
         Ejemplo de México:
         525512345678
       */
-      const whatsappNumber = "525574913481";
+      const whatsappNumber = "525549949268";
 
       const orderLines = cart.map(item => {
         const product = products.find(
@@ -3507,7 +3529,7 @@
         Este es el mismo número de WhatsApp utilizado
         para enviar los pedidos del carrito.
       */
-      const whatsappNumber = "525574913481";
+      const whatsappNumber = "525549949268";
 
       const contactMessage = [
         "Hola, quiero solicitar información en FeliX Pirotecnia.",
